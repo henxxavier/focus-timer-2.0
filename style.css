@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+main {
+  margin: auto;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 19.3rem;
+}
+
+.timer-wrapper {
+  margin-left: 23.3rem;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-timer {
+  font-size: clamp(12.6rem, 5rem + 10vw, 8.8rem);
+  display: flex;
+  margin-bottom: 1.6rem;
+  color: #323238;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  color: #323238;
+}
+
+.play,
+.stop,
+.sum,
+.subtract {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cards {
+  width: 30.9rem;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.card-outono,
+.card-chuva,
+.card-lareira,
+.card-fogo {
+  border-radius: 2.4rem;
+  width: 13.9rem;
+  height: 15.2rem;
+  border: none;
+  background-color: #e1e1e6;
+  cursor: pointer;
+}
+
+.svg-white {
+  fill: white;
+}
+
+.color-green {
+  background-color: rgba(33, 187, 115, 0.62)
+}
+
+.color-blue {
+  background-color: rgba(101, 141, 215, 0.62)
+}
+
+.color-brown {
+  background-color: rgba(159, 91, 4, 0.62)
+}
+
+.color-orange {
+  background-color: rgba(208, 54, 11, 0.62)
+}
+
+
