@@ -14,27 +14,6 @@ body {
   font-weight: 500;
 
 }
-
-.bg-cafeteria {
-  background-image: url(./img/cafeteria.jpg);
-  background-size: cover;
-}
-
-.bg-outono {
-  background-image: url(./img/outono.jpg);
-  background-size: cover;
-}
-
-.bg-chuva {
-  background-image: url(./img/chuva.jpg);
-  background-size: cover;
-}
-
-.bg-lareira {
-  background-image: url(./img/lareira.jpg);
-  background-size: cover;
-}
-
 main {
   display: grid;
   height: 100vh;
@@ -66,15 +45,16 @@ main {
   gap: 4rem;
 }
 
-.display-timer-white {
-  fill: #eeeef1;
-  color: #eeeef1;
+.hide {
+  display: none;
 }
+
 
 .play,
 .stop,
 .sum,
-.subtract {
+.subtract,
+.pause {
   border: none;
   background: none;
   cursor: pointer;
