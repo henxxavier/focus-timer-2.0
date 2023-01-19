@@ -27,6 +27,12 @@ const fallAudio = new Audio("./assets/Floresta.wav");
 const coffShopAudio = new Audio("./assets/Cafeteria.wav");
 const fireplaceAudio = new Audio("./assets/Lareira.wav");
 
+
+let cardFallActive = false
+let cardRainActive = false
+let cardFireplaceActive = false
+let cardFireActive = false
+
 //funcoes
 const resetCards = () => {
   buttonFall.classList.remove("color-green");
@@ -123,32 +129,78 @@ buttonSubtract.addEventListener("click", () => {
 //eventos cards
 buttonFall.addEventListener("click", () => {
   resetCards();
-  buttonFall.classList.toggle("color-green");
-  svgFall.classList.toggle("svg-white");
+  cardFallActive = !cardFallActive
+  
+  if (cardFallActive == true) {
+    buttonFall.classList.add("color-green");
+    svgFall.classList.add("svg-white");
+  
+    fallAudio.play();
+  }
 
-  fallAudio.play();
+  else {
+    buttonFall.classList.remove("color-green");
+    svgFall.classList.remove("svg-white");
+  
+    fallAudio.pause();
+  }
 });
 
 buttonRain.addEventListener("click", () => {
   resetCards();
-  buttonRain.classList.toggle("color-blue");
-  svgRain.classList.toggle("svg-white");
+  cardRainActive = !cardRainActive
 
-  rainAudio.play();
+  if (cardRainActive == true) {
+    
+    buttonRain.classList.add("color-blue");
+    svgRain.classList.add("svg-white");
+  
+    rainAudio.play();
+  } else {
+    buttonRain.classList.remove("color-blue");
+    svgRain.classList.remove("svg-white");
+  
+    rainAudio.pause();
+  }
+
 });
 
 buttonFireplace.addEventListener("click", () => {
   resetCards();
-  buttonFireplace.classList.toggle("color-brown");
-  svgFireplace.classList.toggle("svg-white");
+  cardFireplaceActive = !cardFireplaceActive
+  
+  if (cardFireplaceActive == true) {
+    
+    buttonFireplace.classList.add("color-brown");
+    svgFireplace.classList.add("svg-white");
+  
+    coffShopAudio.play();
+  }
 
-  coffShopAudio.play();
+  else {
+    buttonFireplace.classList.remove("color-brown");
+    svgFireplace.classList.remove("svg-white");
+  
+    coffShopAudio.pause();
+  }
+
 });
 
 buttonFire.addEventListener("click", () => {
   resetCards();
-  buttonFire.classList.toggle("color-orange");
-  svgFire.classList.toggle("svg-white");
 
-  fireplaceAudio.play();
+  cardFireActive = !cardFireActive
+
+  if (cardFireActive == true) {
+    buttonFire.classList.add("color-orange");
+    svgFire.classList.add("svg-white");
+  
+    fireplaceAudio.play();
+  } else {
+    buttonFire.classList.remove("color-orange");
+    svgFire.classList.remove("svg-white");
+  
+    fireplaceAudio.pause();
+  }
+  
 });
