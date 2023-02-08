@@ -100,4 +100,27 @@ main {
   background-color: rgba(208, 54, 11, 0.62)
 }
 
+/* dark mode */
 
+.dark-mode {
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+}
+
+.dark {
+  background-color: #262632;
+}
+
+.dark span,
+.dark path {
+  color: white;
+  fill: white;
+}
+
+.dark .card-outono,
+.dark .card-chuva,
+.dark .card-lareira,
+.dark .card-fogo {
+  background-color: #191921;
+}

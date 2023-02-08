@@ -27,11 +27,12 @@ const fallAudio = new Audio("./assets/Floresta.wav");
 const coffShopAudio = new Audio("./assets/Cafeteria.wav");
 const fireplaceAudio = new Audio("./assets/Lareira.wav");
 
+let cardFallActive = false;
+let cardRainActive = false;
+let cardFireplaceActive = false;
+let cardFireActive = false;
 
-let cardFallActive = false
-let cardRainActive = false
-let cardFireplaceActive = false
-let cardFireActive = false
+const darkMode = document.querySelector(".dark-mode");
 
 //funcoes
 const resetCards = () => {
@@ -129,78 +130,75 @@ buttonSubtract.addEventListener("click", () => {
 //eventos cards
 buttonFall.addEventListener("click", () => {
   resetCards();
-  cardFallActive = !cardFallActive
-  
+  cardFallActive = !cardFallActive;
+
   if (cardFallActive == true) {
     buttonFall.classList.add("color-green");
     svgFall.classList.add("svg-white");
-  
-    fallAudio.play();
-  }
 
-  else {
+    fallAudio.play();
+  } else {
     buttonFall.classList.remove("color-green");
     svgFall.classList.remove("svg-white");
-  
+
     fallAudio.pause();
   }
 });
 
 buttonRain.addEventListener("click", () => {
   resetCards();
-  cardRainActive = !cardRainActive
+  cardRainActive = !cardRainActive;
 
   if (cardRainActive == true) {
-    
     buttonRain.classList.add("color-blue");
     svgRain.classList.add("svg-white");
-  
+
     rainAudio.play();
   } else {
     buttonRain.classList.remove("color-blue");
     svgRain.classList.remove("svg-white");
-  
+
     rainAudio.pause();
   }
-
 });
 
 buttonFireplace.addEventListener("click", () => {
   resetCards();
-  cardFireplaceActive = !cardFireplaceActive
-  
+  cardFireplaceActive = !cardFireplaceActive;
+
   if (cardFireplaceActive == true) {
-    
     buttonFireplace.classList.add("color-brown");
     svgFireplace.classList.add("svg-white");
-  
-    coffShopAudio.play();
-  }
 
-  else {
+    coffShopAudio.play();
+  } else {
     buttonFireplace.classList.remove("color-brown");
     svgFireplace.classList.remove("svg-white");
-  
+
     coffShopAudio.pause();
   }
-
 });
 
 buttonFire.addEventListener("click", () => {
   resetCards();
 
-  cardFireActive = !cardFireActive
+  cardFireActive = !cardFireActive;
 
   if (cardFireActive == true) {
     buttonFire.classList.add("color-orange");
     svgFire.classList.add("svg-white");
-  
+
     fireplaceAudio.play();
   } else {
     buttonFire.classList.remove("color-orange");
     svgFire.classList.remove("svg-white");
-  
+
     fireplaceAudio.pause();
   }
-  
 });
+
+//darkmode
+
+darkMode.addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("dark")
+})
