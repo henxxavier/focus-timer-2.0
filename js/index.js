@@ -33,6 +33,8 @@ let cardFireplaceActive = false;
 let cardFireActive = false;
 
 const darkMode = document.querySelector(".dark-mode");
+const sun = document.querySelector(".sun")
+const moon = document.querySelector(".moon")
 
 //funcoes
 const resetCards = () => {
@@ -137,6 +139,7 @@ buttonFall.addEventListener("click", () => {
     svgFall.classList.add("svg-white");
 
     fallAudio.play();
+    fallAudio.volume = 0.5
   } else {
     buttonFall.classList.remove("color-green");
     svgFall.classList.remove("svg-white");
@@ -154,6 +157,7 @@ buttonRain.addEventListener("click", () => {
     svgRain.classList.add("svg-white");
 
     rainAudio.play();
+    rainAudio.volume = 0.5
   } else {
     buttonRain.classList.remove("color-blue");
     svgRain.classList.remove("svg-white");
@@ -170,6 +174,7 @@ buttonFireplace.addEventListener("click", () => {
     buttonFireplace.classList.add("color-brown");
     svgFireplace.classList.add("svg-white");
 
+    coffShopAudio.volume = 0.2
     coffShopAudio.play();
   } else {
     buttonFireplace.classList.remove("color-brown");
@@ -188,6 +193,7 @@ buttonFire.addEventListener("click", () => {
     buttonFire.classList.add("color-orange");
     svgFire.classList.add("svg-white");
 
+    fireplaceAudio.volume = 0.5
     fireplaceAudio.play();
   } else {
     buttonFire.classList.remove("color-orange");
@@ -201,4 +207,6 @@ buttonFire.addEventListener("click", () => {
 
 darkMode.addEventListener("click", () => {
   document.querySelector("body").classList.toggle("dark")
+  sun.classList.toggle("hide")
+  moon.classList.toggle("hide")
 })

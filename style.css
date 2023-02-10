@@ -105,7 +105,9 @@ main {
 .dark-mode {
   position: absolute;
   right: 0;
-  margin: 1rem;
+  margin: 6.4rem;
+  border: none;
+  background: none;
 }
 
 .dark {
@@ -123,4 +125,20 @@ main {
 .dark .card-lareira,
 .dark .card-fogo {
   background-color: #191921;
+}
+
+.dark .color-green {
+  background-color: rgba(33, 187, 115, 0.62)
+}
+
+.dark .color-blue {
+  background-color: rgba(101, 141, 215, 0.62)
+}
+
+.dark .color-brown {
+  background-color: rgba(159, 91, 4, 0.62)
+}
+
+.dark .color-orange {
+  background-color: rgba(208, 54, 11, 0.62)
 }
