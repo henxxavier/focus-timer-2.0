@@ -68,10 +68,40 @@ main {
   justify-content: center;
 }
 
+.card-volume-outono,
+.card-volume-chuva,
+.card-volume-lareira,
+.card-volume-fogo {
+  appearance: none;
+  display: block;
+  background: black;
+  height: .4rem;
+  width: 9rem;
+  border-radius: 10rem;
+}
+
+.card-volume-outono::-webkit-slider-thumb,
+.card-volume-chuva::-webkit-slider-thumb,
+.card-volume-lareira::-webkit-slider-thumb,
+.card-volume-fogo::-webkit-slider-thumb
+{
+  appearance: none;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: black;
+  border-radius: 50px;
+}
+
 .card-outono,
 .card-chuva,
 .card-lareira,
 .card-fogo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   border-radius: 2.4rem;
   width: 13.9rem;
   height: 15.2rem;
@@ -82,6 +112,16 @@ main {
 
 .svg-white {
   fill: white;
+}
+
+.volume-white{
+  appearance: none;
+  background-color: #fff;
+}
+
+.volume-white::-webkit-slider-thumb{
+  appearance: none;
+  background-color: #fff;
 }
 
 .color-green {
@@ -141,4 +181,16 @@ main {
 
 .dark .color-orange {
   background-color: rgba(208, 54, 11, 0.62)
+}
+
+.dark .card-volume-outono,
+.dark .card-volume-chuva,
+.dark .card-volume-lareira,
+.dark .card-volume-fogo,
+.dark .card-volume-outono::-webkit-slider-thumb,
+.dark .card-volume-chuva::-webkit-slider-thumb,
+.dark .card-volume-lareira::-webkit-slider-thumb,
+.dark .card-volume-fogo::-webkit-slider-thumb
+{
+  background-color: #fff;
 }

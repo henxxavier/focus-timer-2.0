@@ -14,6 +14,11 @@ const svgRain = document.querySelector(".svg-rain");
 const svgFireplace = document.querySelector(".svg-fireplace");
 const svgFire = document.querySelector(".svg-fire");
 
+const volumeFall = document.querySelector(".card-volume-outono")
+const volumeRain = document.querySelector(".card-volume-chuva")
+const volumeFireplace = document.querySelector(".card-volume-lareira")
+const volumeFire = document.querySelector(".card-volume-fogo")
+
 const buttonFall = document.querySelector(".card-outono");
 const buttonRain = document.querySelector(".card-chuva");
 const buttonFireplace = document.querySelector(".card-lareira");
@@ -40,15 +45,19 @@ const moon = document.querySelector(".moon")
 const resetCards = () => {
   buttonFall.classList.remove("color-green");
   svgFall.classList.remove("svg-white");
+  volumeFall.classList.remove("volume-white")
 
   buttonRain.classList.remove("color-blue");
   svgRain.classList.remove("svg-white");
+  volumeRain.classList.remove("volume-white")
 
   buttonFireplace.classList.remove("color-brown");
   svgFireplace.classList.remove("svg-white");
+  volumeFireplace.classList.remove("volume-white")
 
   buttonFire.classList.remove("color-orange");
   svgFire.classList.remove("svg-white");
+  volumeFire.classList.remove("volume-white")
 
   rainAudio.pause();
   fallAudio.pause();
@@ -101,6 +110,7 @@ const decrementTimer = () => {
   updateTimer(minutes - 5, seconds);
 };
 
+
 //eventos timer
 
 buttonPlay.addEventListener("click", () => {
@@ -137,12 +147,14 @@ buttonFall.addEventListener("click", () => {
   if (cardFallActive == true) {
     buttonFall.classList.add("color-green");
     svgFall.classList.add("svg-white");
+    volumeFall.classList.add("volume-white")
 
     fallAudio.play();
     fallAudio.volume = 0.5
   } else {
     buttonFall.classList.remove("color-green");
     svgFall.classList.remove("svg-white");
+    volumeFall.classList.remove("volume-white")
 
     fallAudio.pause();
   }
@@ -155,12 +167,14 @@ buttonRain.addEventListener("click", () => {
   if (cardRainActive == true) {
     buttonRain.classList.add("color-blue");
     svgRain.classList.add("svg-white");
+    volumeRain.classList.add("volume-white")
 
     rainAudio.play();
     rainAudio.volume = 0.5
   } else {
     buttonRain.classList.remove("color-blue");
     svgRain.classList.remove("svg-white");
+    volumeRain.classList.remove("volume-white")
 
     rainAudio.pause();
   }
@@ -173,12 +187,14 @@ buttonFireplace.addEventListener("click", () => {
   if (cardFireplaceActive == true) {
     buttonFireplace.classList.add("color-brown");
     svgFireplace.classList.add("svg-white");
+    volumeFireplace.classList.add("volume-white")
 
     coffShopAudio.volume = 0.2
     coffShopAudio.play();
   } else {
     buttonFireplace.classList.remove("color-brown");
     svgFireplace.classList.remove("svg-white");
+    volumeFireplace.classList.remove("volume-white")
 
     coffShopAudio.pause();
   }
@@ -192,12 +208,14 @@ buttonFire.addEventListener("click", () => {
   if (cardFireActive == true) {
     buttonFire.classList.add("color-orange");
     svgFire.classList.add("svg-white");
+    volumeFire.classList.add("volume-white")
 
     fireplaceAudio.volume = 0.5
     fireplaceAudio.play();
   } else {
     buttonFire.classList.remove("color-orange");
     svgFire.classList.remove("svg-white");
+    volumeFire.classList.remove("volume-white")
 
     fireplaceAudio.pause();
   }
