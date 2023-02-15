@@ -32,6 +32,11 @@ const fallAudio = new Audio("./assets/Floresta.wav");
 const coffShopAudio = new Audio("./assets/Cafeteria.wav");
 const fireplaceAudio = new Audio("./assets/Lareira.wav");
 
+const cardVolumeFall = document.querySelector(".card-volume-outono")
+const cardVolumeRain = document.querySelector(".card-volume-chuva")
+const cardVolumeFireplace = document.querySelector(".card-volume-lareira")
+const cardVolumeFire = document.querySelector(".card-volume-fogo")
+
 let cardFallActive = false;
 let cardRainActive = false;
 let cardFireplaceActive = false;
@@ -150,13 +155,32 @@ buttonFall.addEventListener("click", () => {
     volumeFall.classList.add("volume-white")
 
     fallAudio.play();
-    fallAudio.volume = 0.5
   } else {
     buttonFall.classList.remove("color-green");
     svgFall.classList.remove("svg-white");
     volumeFall.classList.remove("volume-white")
 
     fallAudio.pause();
+  }
+
+  if (cardVolumeFall.value == 0) {
+    fallAudio.volume = 0
+  }
+  
+  else if (cardVolumeFall.value == 25) {
+    fallAudio.volume = 0.25
+  }
+  
+  else if (cardVolumeFall.value == 50) {
+    fallAudio.volume = 0.5
+  }
+  
+  else if (cardVolumeFall.value == 75) {
+    fallAudio.volume = 0.75
+  }
+  
+  else if (cardVolumeFall.value == 100) {
+    fallAudio.volume = 1
   }
 });
 
@@ -178,6 +202,26 @@ buttonRain.addEventListener("click", () => {
 
     rainAudio.pause();
   }
+
+  if (cardVolumeRain.value == 0) {
+    rainAudio.volume = 0
+  }
+  
+  else if (cardVolumeRain.value == 25) {
+    rainAudio.volume = 0.25
+  }
+  
+  else if (cardVolumeRain.value == 50) {
+    rainAudio.volume = 0.5
+  }
+  
+  else if (cardVolumeRain.value == 75) {
+    rainAudio.volume = 0.75
+  }
+  
+  else if (cardVolumeRain.value == 100) {
+    rainAudio.volume = 1
+  }
 });
 
 buttonFireplace.addEventListener("click", () => {
@@ -197,6 +241,26 @@ buttonFireplace.addEventListener("click", () => {
     volumeFireplace.classList.remove("volume-white")
 
     coffShopAudio.pause();
+  }
+
+  if (cardVolumeFireplace.value == 0) {
+    coffShopAudio.volume = 0
+  }
+  
+  else if (cardVolumeFireplace.value == 25) {
+    coffShopAudio.volume = 0.25
+  }
+  
+  else if (cardVolumeFireplace.value == 50) {
+    coffShopAudio.volume = 0.5
+  }
+  
+  else if (cardVolumeFireplace.value == 75) {
+    coffShopAudio.volume = 0.75
+  }
+  
+  else if (cardVolumeFireplace.value == 100) {
+    coffShopAudio.volume = 1
   }
 });
 
@@ -219,7 +283,68 @@ buttonFire.addEventListener("click", () => {
 
     fireplaceAudio.pause();
   }
+
+  if (cardVolumeFire.value == 0) {
+    fireplaceAudio.volume = 0
+  }
+  
+  else if (cardVolumeFire.value == 25) {
+    fireplaceAudio.volume = 0.25
+  }
+  
+  else if (cardVolumeFire.value == 50) {
+    fireplaceAudio.volume = 0.5
+  }
+  
+  else if (cardVolumeFire.value == 75) {
+    fireplaceAudio.volume = 0.75
+  }
+  
+  else if (cardVolumeFire.value == 100) {
+    fireplaceAudio.volume = 1
+  }
 });
+
+// se clicar no volume, nao altera a ativacao do card.
+
+cardVolumeFall.addEventListener("click" , () => {
+  cardFallActive = !cardFallActive;
+})
+
+cardVolumeRain.addEventListener("click" , () => {
+  cardRainActive = !cardRainActive;
+})
+
+cardVolumeFireplace.addEventListener("click" , () => {
+  cardFireplaceActive = !cardFireplaceActive;
+})
+
+cardVolumeFire.addEventListener("click" , () => {
+  cardFireActive = !cardFireActive;
+})
+
+
+//volume
+
+if (cardVolumeFall.value == 0) {
+  fallAudio.volume = 0
+}
+
+else if (cardVolumeFall.value == 25) {
+  fallAudio.volume = 0.25
+}
+
+else if (cardVolumeFall.value == 50) {
+  fallAudio.volume = 0.5
+}
+
+else if (cardVolumeFall.value == 75) {
+  fallAudio.volume = 0.75
+}
+
+else if (cardVolumeFall.value == 100) {
+  fallAudio.volume = 1
+}
 
 //darkmode
 
